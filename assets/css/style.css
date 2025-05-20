@@ -1,4 +1,6 @@
+
 :root {
+
   /**
    * colors
    */
@@ -321,22 +323,37 @@ main {
   border-radius: 20px;
 }
 
+.info-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  align-items: center;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
-  font-weight: var(--fw-500);
+  font-weight: 5000;
   letter-spacing: -0.25px;
   margin-bottom: 10px;
+  
 }
 
 .info-content .title {
-  color: var(--white-1);
+   color: var(--white-1);
   background: var(--onyx);
-  font-size: var(--fs-8);
-  font-weight: var(--fw-300);
-  width: max-content;
+  font-size: var(--fs-5);
+  font-weight: 10;
   padding: 3px 12px;
   border-radius: 8px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Or set this to the height of the parent container */
 }
 
 .info_more-btn {
@@ -753,7 +770,7 @@ main {
   #RESUME
 \*-----------------------------------*/
 
-.article-title { margin-top: 40px; }
+.article-title { margin-top: 10px; }
 .article-title { margin-bottom: 40px; }
 
 
@@ -1488,10 +1505,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box img { width: 120px; }
 
-  .info-content .name { margin-bottom: 15px; }
-
-  .info-content .title { padding: 5px 18px; }
-
+  
   .info_more-btn {
     top: -30px;
     right: -30px;
