@@ -1,22 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
-
   /**
    * colors
    */
@@ -177,9 +159,12 @@ article {
 
 .separator {
   width: 100%;
-  height: 1px;
+  height: auto;
   background: var(--jet);
-  margin: 16px 0;
+  margin: 16px 0;  
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .icon-box {
@@ -492,10 +477,6 @@ main {
 
 .navbar-link.active { color: hsl(45, 100%, 72%) ; font-weight: bold;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #ABOUT
@@ -1859,8 +1840,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: auto;
   }
 
-
-
   /**
    * NAVBAR
    */
@@ -1884,8 +1863,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-link { font-weight: var(--fw-500); }
 
-
-
   /**
    * ABOUT
    */
@@ -1904,16 +1881,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* clients */
 
   .clients-item { min-width: calc(25% - 38px); }
-
-
-
   /**
    * PORTFOLIO
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
-
-
 
   /**
    * BLOG
@@ -1922,11 +1894,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-banner-box { height: 230px; }
 
 }
-
-
-
-
-
 /**
  * responsive larger than 1250px screen
  */
@@ -1952,9 +1919,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
 
   body::-webkit-scrollbar-button { height: 60px; }
-
-
-
   /**
    * REUSED STYLE
    */
@@ -1962,9 +1926,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar, article { width: auto; }
 
   article { min-height: 100%; }
-
-
-
   /**
    * MAIN
    */
@@ -1983,9 +1944,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 75%;
     margin: 0;
   }
-
-
-
   /**
    * SIDEBAR
    */
@@ -1994,25 +1952,21 @@ textarea.form-input::-webkit-resizer { display: none; }
     position: sticky;
     top: 60px;
     max-height: max-content;
-    height: 100%;
+    height: auto;
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
   }
 
   .sidebar-info { flex-direction: column; }
-
   .avatar-box img { width: 150px; }
-
   .info-content .name {
     white-space: nowrap;
     text-align: center;
   }
 
   .info-content .title { margin: auto; }
-
   .info_more-btn { display: none; }
-
   .sidebar-info_more {
     opacity: 1;
     visibility: visible;
@@ -2038,12 +1992,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
-
-
   /**
 	 * RESUME
 	 */
 
   .timeline-text { max-width: 700px; }
-
 }
