@@ -1,23 +1,7 @@
 :root {
-  /**
-   * colors
-   */
-  /* gradient */
-  --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
-  );
-  --bg-gradient-jet: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
-  --bg-gradient-yellow-1: linear-gradient(
-    to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
-  );
+  --bg-gradient-onyx: linear-gradient( to bottom right,hsl(240, 1%, 25%) 3%, sl(0, 0%, 19%) 97%);
+  --bg-gradient-jet: linear-gradient( to bottom right,hsla(240, 1%, 18%, 0.251) 0%,hsla(240, 2%, 11%, 0) 100% ), hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient(to bottom right,hsl(45, 100%, 71%) 0%,hsla(36, 100%, 69%, 0) 50%  );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
     hsla(45, 100%, 71%, 0.251) 0%, 
@@ -234,11 +218,11 @@ main {
 \*-----------------------------------*/
 .sidebar {
   margin-bottom: 15px;
-  max-height: auto;
+  max-height: 122px;
   overflow: auto;
   transition: var(--transition-2);
 }
-.sidebar.active { max-height:auto; }
+.sidebar.active { max-height:500px; }
 .sidebar-info {
   position: relative;
   display: flex;
@@ -248,6 +232,7 @@ main {
 }
 .sidebar::-webkit-scrollbar {
   width: 8px;
+  height: auto;
 }
 .resume-download-link button {
   background-color: #525652;
@@ -1256,10 +1241,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #SIDEBAR
    */
   .sidebar {
-    max-height: 200px;
-    margin-bottom: 30px;
+    max-height: auto;
+    margin-bottom: 300px;
   }
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: auto; }
   .sidebar-info { gap: 25px; }
   .avatar-box { border-radius: 30px; }
   .avatar-box img { width: 120px; }
@@ -1540,7 +1525,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--smoky-black);
     background: hsla(0, 0%, 100%, 0.1);
-    border-radius: 20px;
+    border-radius: 200px;
     box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
                 inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
   }
