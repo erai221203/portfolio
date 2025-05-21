@@ -234,17 +234,20 @@ main {
 \*-----------------------------------*/
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
+  max-height: auto;
+  overflow: auto;
   transition: var(--transition-2);
 }
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height:auto; }
 .sidebar-info {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
+}
+.sidebar::-webkit-scrollbar {
+  width: 8px;
 }
 .resume-download-link button {
   background-color: #525652;
@@ -1226,6 +1229,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 520px;
     margin-inline: auto;
     padding: 30px;
+    height:auto;
   }
   .article-title {
     font-weight: var(--fw-600);
