@@ -218,7 +218,7 @@ main {
 \*-----------------------------------*/
 .sidebar {
   margin-bottom: 15px;
-  max-height: auto;
+  max-height: 130px;
   overflow: auto;
   transition: var(--transition-2);
 }
