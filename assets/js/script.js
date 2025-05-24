@@ -125,11 +125,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("[data-form]");
-
+  
   form.addEventListener("submit", async function (event) {
     event.preventDefault(); // Prevent page refresh
 
@@ -140,8 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("/api/sendEmail", {
-
+      const response = await fetch("/api/sendEmail", {  // ✅ updated URL
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -150,10 +147,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const result = await response.json();
-      alert(result.message); // Show success message
+
+      if (response.ok) {
+        alert("✅ Message sent!");
+        form.reset();
+        formBtn.setAttribute("disabled", "");
+      } else {
+        alert("❌ Failed: " + result.message);
+      }
+
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("Failed to send email.");
+      alert("❌ Failed to send email.");
     }
   });
-});
+}); // ✅ this closing parenthesis was missing
