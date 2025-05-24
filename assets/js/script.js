@@ -146,7 +146,13 @@ document.addEventListener("DOMContentLoaded", function () {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      let result = {};
+      try {
+        result = await response.json();
+      } catch (jsonError) {
+        console.warn("No JSON body in response");
+      }
+
 
       if (response.ok) {
         alert("✅ Message sent!");
