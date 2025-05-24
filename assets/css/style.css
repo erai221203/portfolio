@@ -1162,7 +1162,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   z-index: -1;
   transition: var(--transition-1);
 }
-.form-btn ion-icon { font-size: 16px; }
+.form-btn ion-icon { font-size: 20px; }
 .form-btn:hover { background: var(--bg-gradient-yellow-1); }
 .form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
 .form-btn:disabled {
