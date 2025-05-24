@@ -94,7 +94,7 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
+// Enable/disable form button
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
     if (form.checkValidity()) {
@@ -105,31 +105,8 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    const clickedLinkIndex = i;
-    for (let j = 0; j < pages.length; j++) {
-      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-        navigationLinks[clickedLinkIndex].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove("active");
-        navigationLinks[clickedLinkIndex].classList.remove("active");
-      }
-    }
-  });
-}
-
-
+// contact form submit
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("[data-form]");
-
   form.addEventListener("submit", async function (event) {
     event.preventDefault(); // Prevent page refresh
 
@@ -140,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/send-email", {
+      const response = await fetch("/api/sendEmail", { // ✅ Cloudflare-compatible endpoint
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -149,10 +126,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const result = await response.json();
-      alert(result.message); // Show success message
+
+      if (response.ok) {
+        alert("✅ Message sent!");
+        form.reset();
+        formBtn.setAttribute("disabled", "");
+      } else {
+        alert("❌ Failed: " + result.message);
+      }
+
     } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Failed to send email.");
+      console.error("❌ Error sending email:", error);
+      alert("❌ Failed to send email.");
     }
   });
 });
