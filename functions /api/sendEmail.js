@@ -1,5 +1,3 @@
-// functions/sendEmail.js
-
 export async function onRequestPost(context) {
   try {
     const body = await context.request.json();
@@ -13,6 +11,7 @@ export async function onRequestPost(context) {
       });
     }
 
+    // Get environment variables from .env (Cloudflare Dashboard)
     const SENDGRID_API_KEY = context.env.SENDGRID_API_KEY;
     const TO_EMAIL = context.env.EMAIL_USER;
 
