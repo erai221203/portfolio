@@ -1482,6 +1482,50 @@
                 <span>Send</span>
               </button>
             </form>
+            <script>
+                  const form = document.getElementById("contact-form");
+                  const inputs = form.querySelectorAll("[data-form-input]");
+                  const submitBtn = form.querySelector("[data-form-btn]");
+
+                  // Enable submit when all fields are filled
+                  inputs.forEach(input => {
+                    input.addEventListener("input", () => {
+                      const allFilled = Array.from(inputs).every(i => i.value.trim() !== "");
+                      submitBtn.disabled = !allFilled;
+                    });
+                  });
+
+                  form.addEventListener("submit", async function (e) {
+                    e.preventDefault();
+
+                    const formData = {
+                      fullname: form.fullname.value,
+                      email: form.email.value,
+                      message: form.message.value
+                    };
+
+                    try {
+                      const res = await fetch("/api/sendEmail", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(formData)
+                      });
+
+                      const data = await res.json();
+
+                      if (res.ok) {
+                        alert("✅ Message sent!");
+                        form.reset();
+                        submitBtn.disabled = true;
+                      } else {
+                        alert("❌ Failed to send: " + data.message);
+                      }
+                    } catch (err) {
+                      alert("❌ Error: " + err.message);
+                    }
+                  });
+                </script>
+
 
           </section>
         </article>      
