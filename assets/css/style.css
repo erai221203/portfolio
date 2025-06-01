@@ -365,6 +365,15 @@ main {
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
+
+  @media (max-width: 1080px) {
+    .portfolio {
+      display: none;
+    }
+  }
+
+
+
 .navbar {
   position: fixed;
   bottom: 0;
