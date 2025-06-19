@@ -773,6 +773,8 @@ main {
   background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;
+  width: 0%; /* Start at 0 */
+  transition: width 1.5s ease-in-out; /* Smooth animation */
 }
 /*-----------------------------------*\
   #Project
