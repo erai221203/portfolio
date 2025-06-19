@@ -1771,18 +1771,29 @@
       </div>
     </main>
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.skills-item').forEach(item => {
-          const data = item.querySelector('data');
-          const fill = item.querySelector('.skill-progress-fill');
-          const value = data.getAttribute('value') + '%';
-          // Trigger animation
-          setTimeout(() => {
-            fill.style.width = value;
-          }, 100); // Small delay to ensure transition works
+      document.addEventListener('DOMContentLoaded', () => {
+        const skills = document.querySelectorAll('.skills-item');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const data = entry.target.querySelector('data');
+              const fill = entry.target.querySelector('.skill-progress-fill');
+              const value = data.getAttribute('value') + '%';
+              fill.style.width = value;
+
+              // Optional: unobserve once animated
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.5 // Trigger when 50% of item is visible
         });
+
+        skills.forEach(skill => observer.observe(skill));
       });
     </script>
+
 
     <!-- custom js link-->
     <script src="./assets/js/script.js"></script>
