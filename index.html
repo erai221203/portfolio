@@ -1770,6 +1770,20 @@
         </article>      
       </div>
     </main>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.skills-item').forEach(item => {
+          const data = item.querySelector('data');
+          const fill = item.querySelector('.skill-progress-fill');
+          const value = data.getAttribute('value') + '%';
+          // Trigger animation
+          setTimeout(() => {
+            fill.style.width = value;
+          }, 100); // Small delay to ensure transition works
+        });
+      });
+    </script>
+
     <!-- custom js link-->
     <script src="./assets/js/script.js"></script>
     <!--
