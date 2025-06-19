@@ -1253,6 +1253,31 @@ textarea.form-input::-webkit-resizer { display: none; }
     max-height: auto;
     margin-bottom: 300px;
   }
+  .animated-avatar {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.pulse-img {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
   .sidebar.active { max-height: auto; }
   .sidebar-info { gap: 25px; }
   .avatar-box { border-radius: 30px; }
