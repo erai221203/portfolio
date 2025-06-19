@@ -607,93 +607,205 @@
           </section>
         </article>
      <!--#Project-->      
-              <article class="projects" data-page="projects">
-                  <br><br>
-                  <header>
-                    <h2 class="h2 testimonials-title">My Projects</h2>
-                  </header>
-
-                  <section class="testimonials">
-                    <ol class="testimonials-list">
-
-                      <!-- Project: FaceIQ -->
+          <article class="projects" data-page="projects">
+            <br>
+            <br>
+            <header><h2 class="h2 testimonials-title">My Projects</h2></header>
+                <section class="testimonials">    
+                  
+                    <!--Project FaceIQ-->
+                    <ol class="testimonials-list has-scrollbar">
                       <li class="testimonials-item">
                         <div class="content-card" data-testimonials-item>
                           <figure class="testimonials-avatar-box">
                             <img src="./assets/images/avatar-1.png" alt="Katomaran" width="60" data-testimonials-avatar>
                           </figure>
-                          <h3 class="h3 testimonials-item-title">FaceIQ</h3>
-                          <h5 class="h5 testimonials-item-title">Face Recognition Web App with Chatbot:</h5>
-                          <div class="testimonials-text">
-                            <p style="color: white; font-weight: bold;">Katomaran Technologies Pvt Ltd. (May 2025):</p><br>
-                            <p>FaceIQ is a real-time face recognition web app using webcam feed. It detects and identifies faces, displays names,
-                              and draws bounding boxes. It also integrates a RAG-based chatbot to answer queries using retrieved documents.</p>
-                          </div>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title>FaceIQ</h3>
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Face Recognition Web App with Chatbot:</h5>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <p style="color: white; font-weight: bold;"> Katomaran Technologies Pvt Ltd.(May 2025):</p><br> 
+                            <p>FaceIQ is an advanced face recognition web application that utilizes a live webcam feed to detect and 
+                              identify faces in real-time. It draws bounding boxes and displays names on recognized faces as they 
+                              appear in the frame. While the system processes video continuously, it requires initial user configuration
+                                or interaction to enable detection, making it semi-automated rather than fully automatic. The platform 
+                                also features integration with a real-time AI Q&A system powered by Retrieval-Augmented Generation (RAG), 
+                                allowing users to interact with the system for intelligent responses based on retrieved data.</p>
+                           </div>
                         </div>
                       </li>
-
-                      <!-- Project: EDION -->
+                    </ol>  
+                    <!--Project EDION-->
+                    <ol class="testimonials-list has-scrollbar">
                       <li class="testimonials-item">
-                        <div class="content-card">
+                        <div class="content-card" data-testimonials-item>
                           <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="EDION" width="60">
+                            <img src="./assets/images/avatar-1.png" alt="me" width="60" data-testimonials-avatar>
                           </figure>
-                          <h3 class="h3 testimonials-item-title">E.D.I.O.N</h3>
-                          <h5 class="h5 testimonials-item-title">Extensible Droid Intelligence for Omni-functional Navigation:</h5>
-                          <div class="testimonials-text">
-                            <p style="color: white; font-weight: bold;">E.D.I.O.N (May 2025):</p><br>
-                            <p>A voice-controlled AI assistant built with Python, PyQt, and GPT4All. It supports voice authentication, wake-word detection,
-                              OS control (apps, typing, volume), and natural conversation. Features a floating GUI widget for seamless interaction.</p>
-                          </div>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title>E.D.I.O.N</h3>
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Extensible Droid Intelligence for Omni-functional Navigation:</h5>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <p style="color: white; font-weight: bold;"> E.D.I.O.N (May 2025):</p><br> 
+                            <p>A voice-controlled AI assistant inspired by JARVIS, built using Python, PyQt, and GPT4All for human-like interaction.
+                Features include voice authentication, wake word detection, real-time OS control (Chrome, Notepad, volume, typing, etc.), and natural conversation via local LLMs.
+                Integrated with speech recognition, translation, memory logging, and a persistent floating widget GUI for seamless user experience.</p>
+                           </div>
                         </div>
                       </li>
-
-                      <!-- Project: Portfolio -->
+                    </ol>  
+                    <!--Project Portfolio-->
+                    <ol class="testimonials-list has-scrollbar">
                       <li class="testimonials-item">
-                        <div class="content-card">
+                        <div class="content-card" data-testimonials-item>
                           <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="Portfolio" width="60">
+                            <img src="./assets/images/avatar-1.png" alt="web" width="60" data-testimonials-avatar>
                           </figure>
-                          <h3 class="h3 testimonials-item-title">Portfolio Dev</h3>
-                          <h5 class="h5 testimonials-item-title">Personal Portfolio:</h5>
-                          <div class="testimonials-text">
-                            <p style="color: white; font-weight: bold;">Personal Portfolio (May 2025):</p><br>
-                            <p>Designed a personal portfolio website using React and Node.js on Cloudflare. Optimized for performance, responsiveness,
-                              and interactivity to showcase skills, resume, and projects.</p>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Portfolio Dev</h3>
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Personal Portfolio:</h5>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <p style="color: white; font-weight: bold;"> Personal Portfolio (May 2025):</p><br> 
+                            <p style="color: white; font-weight: bold;"> Designed and deployed a responsive personal portfolio website using React (frontend) and Node.js (backend) in Cloudflare. Focused on
+                                delivering a smooth user experience with clean UI, optimized performance, and interactive features to effectively showcase my skills
+                                and projects..</p>
                           </div>
                         </div>
                       </li>
-
-                      <!-- Add other projects below in the same pattern -->
-
-                    </ol>
-                  </section>
-
-                  <!-- Modal container -->
-                  <div class="modal-container" data-modal-container>
-                    <div class="overlay" data-overlay></div>
-
-                    <section class="testimonials-modal">
-                      <button class="modal-close-btn" data-modal-close-btn>
-                        <ion-icon name="close-outline"></ion-icon>
-                      </button>
-
-                      <div class="modal-img-wrapper">
-                        <figure class="modal-avatar-box">
-                          <img src="./assets/images/avatar-1.png" alt="Project Image" width="80" data-modal-img>
+                    </ol>                    
+                  <!--Project CRS-->
+                  <ol class="testimonials-list has-scrollbar">
+                    <li class="testimonials-item">
+                      <div class="content-card" data-testimonials-item>
+                        <figure class="testimonials-avatar-box">
+                          <img src="./assets/images/avatar-1.png" alt="crs" width="60" data-testimonials-avatar>
                         </figure>
-                        <img src="./assets/images/icon-quote.svg" alt="quote icon">
+                        <h3 class="h3 testimonials-item-title" data-testimonials-title>Technical Lead</h3>  
+                        <h5 class="h5 testimonials-item-title" data-testimonials-title>Cloud Radar System:</h5>                      
+                        <div class="testimonials-text" data-testimonials-text>
+                           <p style="color: white; font-weight: bold;">Ezon Energy Solutions (P) Ltd (Apr 2024 - Mar 2025):</p><br> 
+                           <p>Developed an AI-powered dual-axis solar tracker using Raspberry Pi and OpenCV for real-time sun and cloud detection,
+                            optimizing panel orientation and boosting energy capture by 15-20% in cloudy conditions. Built a remote dashboard for
+                            live monitoring of panel position, cloud cover, and energy output.</p>
+                        </div>
                       </div>
-
-                      <div class="modal-content">
-                        <h4 class="h4 testimonials-item-title" data-testimonials-title></h4>
-                        <time datetime="2024-12-22"></time>
-                        <div data-modal-text></div>
-                      </div>
-                    </section>
-                  </div>
-                </article>
-
+                    </li>
+                  </ol>
+                    <!--Project AMR-->
+                    <ol class="testimonials-list has-scrollbar">
+                      <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                          <figure class="testimonials-avatar-box">
+                            <img src="./assets/images/avatar-1.png" alt="forge" width="60" data-testimonials-avatar>
+                          </figure>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Innovation Engineer</h3>
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Autonomous Mobile Robot:</h5>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <p style="color: white; font-weight: bold;"> Forge Innovation & Ventures (Aug 2024 - Jan 2025):</p><br> 
+                            <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time obstacle avoidance
+                                  for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and AutoCAD for precise 3D
+                                  modeling and structural planning.</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>                
+                    <!--Project urban-->
+                    <ol class="testimonials-list has-scrollbar">
+                      <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                          <figure class="testimonials-avatar-box">
+                            <img src="./assets/images/avatar-1.png" alt="forge" width="60" data-testimonials-avatar>
+                          </figure>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Technical Assistant</h3>
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Wise-Ai-Thon:</h5>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <p style="color: white; font-weight: bold;"> Urban layout Designing with hybrid VAE-CGAN:</p><br> 
+                            <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time obstacle avoidance
+                                  for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and AutoCAD for precise 3D
+                                  modeling and structural planning.</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                    <!--Project paper-->
+                    <ol class="testimonials-list has-scrollbar">
+                      <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                          <figure class="testimonials-avatar-box">
+                            <img src="./assets/images/avatar-1.png" alt="ieee" width="60" data-testimonials-avatar>
+                          </figure>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Research and Technical Lead </h3>
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Artistic Fusion: AI Powered Artistry for Story Boarding :</h5>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <p style="color: white; font-weight: bold;"> Paper Presentation - IEEE (Apr 2024 - Oct 2024):</p><br> 
+                            <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time obstacle avoidance
+                                  for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and AutoCAD for precise 3D
+                                  modeling and structural planning.<br>
+                                  <a class="form-btn" href="https://ieeexplore.ieee.org/abstract/document/10763187" target="_blank" rel="noopener noreferrer">
+                                      <ion-icon name="paper-plane"></ion-icon>
+                                      <span>Click here to check my paper</span></a>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                    <!--Project codsoft-->
+                    <ol class="testimonials-list has-scrollbar">
+                      <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                          <figure class="testimonials-avatar-box">
+                            <img src="./assets/images/avatar-1.png" alt="cod" width="60" data-testimonials-avatar>
+                          </figure>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title>ML Engineer </h3>
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Spam Detection, Churn Prediction, Movie genre classification :</h5>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <p style="color: white; font-weight: bold;">Codsoft (May 2024 - Jun 2024):</p> <br>
+                            <p>Developed machine learning models in Python for real-world classification tasks. Projects included spam detection, movie
+                                genre classification, and churn prediction. Utilized NLP, data preprocessing, and feature engineering techniques. Evaluated
+                                models using accuracy, precision, recall, and F1-score for reliability.
+                                <br>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                    
+                    <ol class="testimonials-list has-scrollbar">
+                      <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                         <!-- <figure class="testimonials-avatar-box">
+                            <img src="./assets/images/avatar-1.png" alt="hack" width="60" data-testimonials-avatar>
+                          </figure>
+                          <h3 class="h3 testimonials-item-title" data-testimonials-title></h3>                          
+                          <h5 class="h5 testimonials-item-title" data-testimonials-title></h5>-->
+                          <div class="modal-content">
+                            <h4 class="h4 modal-title" data-modal-title></h4>
+                            <time datetime="2024-12-22"></time></div>
+                          <div class="testimonials-text" data-testimonials-text>
+                            <h3 style="color: white; font-weight: bold;"> </h3><br> 
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                </section>
+                <!--testimonials modal-->
+                <div class="modal-container" data-modal-container>
+                  <div class="overlay" data-overlay></div>
+                  <section class="testimonials-modal">
+                    <button class="modal-close-btn" data-modal-close-btn>
+                      <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                    <div class="modal-img-wrapper">
+                      <figure class="modal-avatar-box">
+                        <img src="./assets/images/avatar-1.png" alt="crs" width="80" data-modal-img>
+                      </figure>
+                      <img src="./assets/images/icon-quote.svg" alt="quote icon">
+                    </div>
+                    <div class="modal-content">
+                      <h4 class="h4 testimonials-item-title.crs" data-testimonials-title> </h4>
+                          
+                      <time datetime="2024-12-22"></time>
+                      <div data-modal-text></div>
+                    </div>
+                    <div class="overlay" data-overlay></div>
+                  </section>              
+                </div>
+            </article>
         <!--
           - #RESUME
         -->
