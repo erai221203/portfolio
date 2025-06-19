@@ -26,22 +26,6 @@ const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.testimonials-item');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        // Optional: unobserve if you want animation only once
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  items.forEach(item => observer.observe(item));
-});
-
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
