@@ -1774,25 +1774,28 @@
       document.addEventListener('DOMContentLoaded', () => {
         const skills = document.querySelectorAll('.skills-item');
 
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const data = entry.target.querySelector('data');
-              const fill = entry.target.querySelector('.skill-progress-fill');
-              const value = data.getAttribute('value') + '%';
-              fill.style.width = value;
+            const fill = entry.target.querySelector('.skill-progress-fill');
+            const data = entry.target.querySelector('data');
+            const value = data.getAttribute('value') + '%';
 
-              // Optional: unobserve once animated
-              observer.unobserve(entry.target);
+            if (entry.isIntersecting) {
+              // Grow the bar
+              fill.style.width = value;
+            } else {
+              // Reset the bar when it leaves view
+              fill.style.width = '0%';
             }
           });
         }, {
-          threshold: 0.5 // Trigger when 50% of item is visible
+          threshold: 0.5 // Trigger when 50% is in view
         });
 
         skills.forEach(skill => observer.observe(skill));
       });
     </script>
+
 
 
     <!-- custom js link-->
