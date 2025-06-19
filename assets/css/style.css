@@ -521,6 +521,8 @@ main {
 .modal-container.active {
   pointer-events: all;
   visibility: visible;
+  display: flex;
+  align-items: center;
 }
 .overlay {
   position: fixed;
@@ -1360,7 +1362,13 @@ textarea.form-input::-webkit-resizer { display: none; }
     line-clamp: 2;
   }
   /* testimonials modal */
-  .modal-container { padding: 20px; }
+  .modal-container { 
+     display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  padding: 20px; }
   .testimonials-modal {
     display: flex;
     justify-content: flex-start;

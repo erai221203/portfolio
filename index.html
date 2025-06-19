@@ -1783,6 +1783,42 @@
         skills.forEach(skill => observer.observe(skill));
       });
     </script>
+    <script>
+  // Get all cards
+  const testimonialItems = document.querySelectorAll('[data-testimonials-item]');
+  const modalContainer = document.querySelector('[data-modal-container]');
+  const modalCloseBtn = document.querySelector('[data-modal-close-btn]');
+  const modalTitle = document.querySelector('[data-modal-title]');
+  const modalText = document.querySelector('[data-modal-text]');
+  const modalImg = document.querySelector('[data-modal-img]');
+  
+  // Loop through all project cards
+  testimonialItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const title = item.querySelector('[data-testimonials-title]').innerText;
+      const text = item.querySelector('[data-testimonials-text]').innerHTML;
+      const avatar = item.querySelector('[data-testimonials-avatar]').src;
+
+      modalTitle.textContent = title;
+      modalText.innerHTML = text;
+      modalImg.src = avatar;
+
+      modalContainer.classList.add('active');
+    });
+  });
+
+  // Close modal
+  modalCloseBtn.addEventListener('click', () => {
+    modalContainer.classList.remove('active');
+  });
+
+  // Close when clicking outside
+  document.querySelectorAll('[data-overlay]').forEach(overlay => {
+    overlay.addEventListener('click', () => {
+      modalContainer.classList.remove('active');
+    });
+  });
+</script>
 
 
 
