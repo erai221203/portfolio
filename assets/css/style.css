@@ -1265,16 +1265,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     transform: translateY(-10px);
   }
 }
-.float-img {
-  animation: floatY 3s ease-in-out infinite;
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1.2s ease-out forwards;
 }
 
-@keyframes floatY {
-  0%, 100% {
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
     transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }
 
