@@ -500,22 +500,124 @@ main {
 }
 /**
  * #testimonials-modal
- */
+ *//* Modal Container */
 .modal-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none; /* toggle with JS */
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  z-index: 20;
-  pointer-events: none;
-  visibility: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
+
+/* Show modal when active */
+.modal-container.active {
+  display: flex;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+/* Modal Panel */
+.testimonials-modal {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  width: 90%;
+  padding: 40px;
+  color: white;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  animation: popUp 0.4s ease;
+}
+
+/* Image area */
+.modal-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+/* Avatar */
+.modal-avatar-box img {
+  border-radius: 20px;
+  width: 75px;
+  border: 2px solid white;
+}
+
+/* Quote icon */
+.modal-img-wrapper > img {
+  width: 35px;
+  opacity: 0.8;
+}
+
+/* Content area */
+.modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content time {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.modal-content h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.modal-content [data-modal-text] {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Close button */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .modal-container::-webkit-scrollbar { display: none; }
 .modal-container.active {
   pointer-events: all;

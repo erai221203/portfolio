@@ -26,6 +26,16 @@ const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
+const openModal = () => {
+  document.querySelector('.modal-container').classList.add('active');
+};
+
+const closeModal = () => {
+  document.querySelector('.modal-container').classList.remove('active');
+};
+
+document.querySelector('[data-modal-close-btn]').addEventListener('click', closeModal);
+document.querySelector('[data-overlay]').addEventListener('click', closeModal);
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
