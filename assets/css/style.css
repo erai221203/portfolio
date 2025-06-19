@@ -1265,16 +1265,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     transform: translateY(-10px);
   }
 }
-.pulse-img {
-  animation: pulse 2.5s ease-in-out infinite;
+.spin-img {
+  animation: spinSlow 10s linear infinite;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    transform: scale(1.05);
+  to {
+    transform: rotate(360deg);
   }
 }
 
