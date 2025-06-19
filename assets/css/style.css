@@ -1610,7 +1610,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     z-index: 1;
   }
   .sidebar-info { flex-direction: column; }
-  .avatar-box img { width: 150px; border-radius: 10px;}
+  .avatar-box img { width: 200px; border-radius: 10px;}
   .info-content .name {
     white-space: nowrap;
     text-align: center;
