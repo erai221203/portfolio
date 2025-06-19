@@ -1267,7 +1267,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translatex(20px);
   animation: fadeInSlideUp 2s ease-out forwards;
 }
 
