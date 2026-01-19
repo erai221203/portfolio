@@ -1,14 +1,18 @@
 'use strict';
 
 // element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const elementToggleFunc = function (elem) { 
+  if (elem) elem.classList.toggle("active"); 
+}
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+if (sidebarBtn) {
+  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+}
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -23,24 +27,38 @@ const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+  if (modalContainer) modalContainer.classList.toggle("active");
+  if (overlay) overlay.classList.toggle("active");
 }
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
   testimonialsItem[i].addEventListener("click", function () {
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    const avatar = this.querySelector("[data-testimonials-avatar]");
+    const title = this.querySelector("[data-testimonials-title]");
+    const text = this.querySelector("[data-testimonials-text]");
+    
+    if (modalImg && avatar) {
+      modalImg.src = avatar.src;
+      modalImg.alt = avatar.alt;
+    }
+    if (modalTitle && title) {
+      modalTitle.innerHTML = title.innerHTML;
+    }
+    if (modalText && text) {
+      modalText.innerHTML = text.innerHTML;
+    }
     testimonialsModalFunc();
   });
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+}
+if (overlay) {
+  overlay.addEventListener("click", testimonialsModalFunc);
+}
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -48,13 +66,15 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+if (select) {
+  select.addEventListener("click", function () { elementToggleFunc(this); });
+}
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
+    if (selectValue) selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
   });
@@ -81,9 +101,9 @@ let lastClickedBtn = filterBtn[0];
 for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
+    if (selectValue) selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
-    lastClickedBtn.classList.remove("active");
+    if (lastClickedBtn) lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
   });
@@ -97,10 +117,10 @@ const formBtn = document.querySelector("[data-form-btn]");
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
+    if (form && form.checkValidity()) {
+      if (formBtn) formBtn.removeAttribute("disabled");
     } else {
-      formBtn.setAttribute("disabled", "");
+      if (formBtn) formBtn.setAttribute("disabled", "");
     }
   });
 }
@@ -126,45 +146,56 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("[data-form]");
+  const contactForm = document.querySelector("[data-form]");
   
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // Prevent page refresh
+  if (contactForm) {
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevent page refresh
 
-    const formData = {
-      fullname: document.querySelector("[name='fullname']").value,
-      email: document.querySelector("[name='email']").value,
-      message: document.querySelector("[name='message']").value
-    };
+      const fullnameInput = document.querySelector("[name='fullname']");
+      const emailInput = document.querySelector("[name='email']");
+      const messageInput = document.querySelector("[name='message']");
 
-    try {
-      const response = await fetch("/api/sendEmail", {  // ✅ updated URL
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      if (!fullnameInput || !emailInput || !messageInput) {
+        console.warn("Form inputs not found");
+        return;
+      }
 
-      let result = {};
+      const formData = {
+        fullname: fullnameInput.value,
+        email: emailInput.value,
+        message: messageInput.value
+      };
+
       try {
-        result = await response.json();
-      } catch (jsonError) {
-        console.warn("No JSON body in response");
+        const response = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        let result = {};
+        try {
+          result = await response.json();
+        } catch (jsonError) {
+          console.warn("No JSON body in response");
+        }
+
+
+        if (response.ok) {
+          alert("✅ Message sent!");
+          contactForm.reset();
+          if (formBtn) formBtn.setAttribute("disabled", "");
+        } else {
+          alert("❌ Failed: " + (result.message || "Unknown error"));
+        }
+
+      } catch (error) {
+        console.error("Error sending email:", error);
+        alert("❌ Failed to send email.");
       }
-
-
-      if (response.ok) {
-        alert("✅ Message sent!");
-        form.reset();
-        formBtn.setAttribute("disabled", "");
-      } else {
-        alert("❌ Failed: " + result.message);
-      }
-
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("❌ Failed to send email.");
-    }
-  });
+    });
+  }
 }); // ✅ this closing parenthesis was missing

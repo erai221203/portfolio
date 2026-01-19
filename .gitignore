@@ -9,7 +9,7 @@ node_modules/
 Thumbs.db
 
 # IDE/Editor
-.vscode/
+.vscode
 .idea/
 *.swp
 *.swo
