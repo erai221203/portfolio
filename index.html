@@ -109,8 +109,7 @@
             </a>
           </li>
         </ul>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- ionicons loaded at bottom of page -->
         <br>
         <hr />
         <div class="separator"></div>
@@ -1870,9 +1869,9 @@
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Me</h3>
           <!-- Inline contact form (replaces external Google Forms link). Fields: name, email, message -->
-          <form class="form" id="contact-form" novalidate>
+          <!-- <form class="form" id="contact-form" novalidate>
             <label for="contact-name" class="sr-only">Your name</label>
-            <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+            <input type="text" id="contact-name" name="fullname" placeholder="Your name" required>
 
             <label for="contact-email" class="sr-only">Your email</label>
             <input type="email" id="contact-email" name="email" placeholder="Your email" required>
@@ -1886,16 +1885,16 @@
             </button>
 
             <p id="contact-status" role="status" aria-live="polite" style="margin-top:12px"></p>
-          </form>
+          </form> -->
 
-          <!-- Original external form preserved below for reference (commented out)
+         
           <form class="form" data-form id="contact-form-external">
             <a class="form-btn" href="https://forms.gle/t1jQAbFXAj43Yd3B6" target="_blank" rel="noopener noreferrer">
               <ion-icon name="paper-plane"></ion-icon>
               <span>SAY HELLO HERE</span>
             </a>
           </form>
-          -->
+         
         </section>
       </article>
     </div>
@@ -1940,10 +1939,14 @@
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        
+        console.log('Form submitted');
 
         const name = document.getElementById('contact-name').value.trim();
         const email = document.getElementById('contact-email').value.trim();
         const message = document.getElementById('contact-message').value.trim();
+
+        console.log('Form values:', { name, email, message });
 
         // basic validation
         if (!name || !email || !message) {
@@ -1962,12 +1965,25 @@
           // Payload keys must match server expectations (fullname)
           const payload = { fullname: name, email, message };
 
-          // Post to same-origin /contact (works with Cloudflare Pages + Workers)
-          const res = await fetch('/contact', {
+          // Determine the correct endpoint URL
+          // For local dev with Live Server (port 5500), use explicit backend port
+          // For production (Cloudflare Pages), use relative path
+          const isLocalDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+          const endpoint = isLocalDev 
+            ? 'http://localhost:3000/contact'  // Backend server port
+            : '/contact';  // Production: same origin
+
+          console.log('Sending to endpoint:', endpoint);
+          console.log('Payload:', payload);
+
+          // Post to /contact endpoint
+          const res = await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
           });
+
+          console.log('Response status:', res.status);
 
           if (!res.ok) {
             const text = await res.text().catch(() => 'Server error');

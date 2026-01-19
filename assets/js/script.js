@@ -63,7 +63,7 @@ if (overlay) {
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 if (select) {
@@ -145,57 +145,5 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.querySelector("[data-form]");
-  
-  if (contactForm) {
-    contactForm.addEventListener("submit", async function (event) {
-      event.preventDefault(); // Prevent page refresh
 
-      const fullnameInput = document.querySelector("[name='fullname']");
-      const emailInput = document.querySelector("[name='email']");
-      const messageInput = document.querySelector("[name='message']");
-
-      if (!fullnameInput || !emailInput || !messageInput) {
-        console.warn("Form inputs not found");
-        return;
-      }
-
-      const formData = {
-        fullname: fullnameInput.value,
-        email: emailInput.value,
-        message: messageInput.value
-      };
-
-      try {
-        const response = await fetch("/api/sendEmail", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        let result = {};
-        try {
-          result = await response.json();
-        } catch (jsonError) {
-          console.warn("No JSON body in response");
-        }
-
-
-        if (response.ok) {
-          alert("✅ Message sent!");
-          contactForm.reset();
-          if (formBtn) formBtn.setAttribute("disabled", "");
-        } else {
-          alert("❌ Failed: " + (result.message || "Unknown error"));
-        }
-
-      } catch (error) {
-        console.error("Error sending email:", error);
-        alert("❌ Failed to send email.");
-      }
-    });
-  }
-}); // ✅ this closing parenthesis was missing
+// Note: Contact form handling is in index.html inline script for better compatibility
