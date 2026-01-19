@@ -1,1060 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eraianbu Portfolio</title>
-    <link rel="shortcut icon" href="./assets/images/me/me.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!--
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eraianbu Portfolio</title>
+  <link rel="shortcut icon" href="./assets/images/me/me.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!--
       - google font link
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
 
-  </head>
-  <body>
-    <!--- #MAIN-->
-    <main>
-      <!--- #SIDEBAR-->
-      <aside class="sidebar" data-sidebar style="height: 100vh;">
-            <div class="sidebar-info">
-              <h1 class="portfolio" title="Eraianbu Rajkumar" style="color: gold; cursor: pointer; font-size: 45px; font-family: 'Playfair Display', serif; text-shadow: 0 0 10px gold, 0 0 20px rgba(255,215,0,0.6); transition: all 0.3s ease;" onclick="this.style.textShadow='0 0 20px gold, 0 0 40px rgba(255,215,0,0.9)'; setTimeout(()=>this.style.textShadow='0 0 10px gold, 0 0 20px rgba(255,215,0,0.6)',300); window.location.href='index.html'">Portfolio</h1>
-              <figure class="avatar-box fade-in" >
-                <img  src="./assets/images/me/new.jpg" alt="Portrait of Eraianbu Rajkumar" width="80">
-              </figure>
+</head>
 
-              <div class="info-content">
-                <h1 class="name" title="Eraianbu Rajkumar">Eraianbu Rajkumar</h1>
-                <p class="title">Quality Assurance Intelligence Intern | AIML Engineer | Data Analyst </p>
-              </div>
-              <button class="info_more-btn" id="toggle-btn" data-sidebar-btn>
-                <span class="toggle-text">More</span>
-                <ion-icon name="chevron-down"></ion-icon>
-              </button>
-              <div class="extra-info" id="extra-info" style="display: none;" >
-              </div>
+<body>
+  <!--- #MAIN-->
+  <main>
+    <!--- #SIDEBAR-->
+    <aside class="sidebar" data-sidebar style="height: 100vh;">
+      <div class="sidebar-info">
+        <h1 class="portfolio" title="Eraianbu Rajkumar"
+          style="color: gold; cursor: pointer; font-size: 45px; font-family: 'Playfair Display', serif; text-shadow: 0 0 10px gold, 0 0 20px rgba(255,215,0,0.6); transition: all 0.3s ease;"
+          onclick="this.style.textShadow='0 0 20px gold, 0 0 40px rgba(255,215,0,0.9)'; setTimeout(()=>this.style.textShadow='0 0 10px gold, 0 0 20px rgba(255,215,0,0.6)',300); window.location.href='index.html'">
+          Portfolio</h1>
+        <figure class="avatar-box fade-in">
+          <img src="./assets/images/me/new.jpg" alt="Portrait of Eraianbu Rajkumar" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Eraianbu Rajkumar">Eraianbu Rajkumar</h1>
+          <p class="title">Quality Assurance Intelligence Intern | AIML Engineer | Data Analyst </p>
+        </div>
+        <button class="info_more-btn" id="toggle-btn" data-sidebar-btn>
+          <span class="toggle-text">More</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+        <div class="extra-info" id="extra-info" style="display: none;">
+        </div>
+      </div>
+      <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const toggleText = toggleBtn.querySelector('.toggle-text');
+        const extraInfo = document.getElementById('extra-info');
+        toggleBtn.addEventListener('click', () => {
+          const isVisible = extraInfo.style.display === 'block';
+          extraInfo.style.display = isVisible ? 'none' : 'block';
+          toggleText.textContent = isVisible ? 'More' : 'Hide';
+        });
+      </script>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-            <script>
-              const toggleBtn = document.getElementById('toggle-btn');
-              const toggleText = toggleBtn.querySelector('.toggle-text');
-              const extraInfo = document.getElementById('extra-info');
-              toggleBtn.addEventListener('click', () => {
-                const isVisible = extraInfo.style.display === 'block';
-                extraInfo.style.display = isVisible ? 'none' : 'block';
-                toggleText.textContent = isVisible ? 'More' : 'Hide';
-              });
-            </script>
-            <div class="sidebar-info_more">
-              <div class="separator"></div>
-              <ul class="contacts-list">
-                <li class="contact-item">
-                  <div class="icon-box"> 
-                    <ion-icon name="mail-outline"></ion-icon>
-                  </div>
-                  <div class="contact-info">
-                    <p class="contact-title">Email</p>
-                    <a href="eraianbu872@gmail.com" class="contact-link">eraianbu872@gmail.com</a>
-                  </div>
-                </li>
-                <li class="contact-item">
-                  <div class="icon-box">
-                    <ion-icon name="phone-portrait-outline"></ion-icon>
-                  </div>
-                  <div class="contact-info">
-                    <p class="contact-title">Phone</p>
-                    <a href="tel:+91 63824 84009" class="contact-link">+91 63824 84009</a>
-                  </div>
-                </li>
-                <li class="contact-item">
-                  <div class="icon-box">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                  </div>
-                  <div class="contact-info">
-                    <p class="contact-title">DOB</p>
-                    <time datetime="1982-06-23">Dec 22, 2003</time>
-                  </div>
-                </li>
-                <li class="contact-item">
-                  <div class="icon-box">
-                    <ion-icon name="location-outline"></ion-icon>
-                  </div>
-                  <div class="contact-info">
-                    <p class="contact-title">Location</p>
-                    <address>Coimbatore, Tamil Nadu, India</address>
-                  </div>
-                </li>
-                <li class="contact-item">
-                  <a href="assets/Eraianbu R.pdf" download class="resume-download-link" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-                    <div class="icon-box">
-                      <ion-icon name="download-outline"></ion-icon>
-                    </div>
-                    <div class="contact-info">
-                      <p class="contact-title">DOWNLOAD RESUME</p>
-                      <p class="contact-subtitle">Click to Download My Resume</p> 
-                    </div>
-                  </a>
-                </li>
-              </ul>
-              <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-              <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-              <br>
-              <hr />
-              <div class="separator"></div>      
-              <ul class="social-list">
-                <li class="social-item">
-                  <a href="https://github.com/erai221203" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <ion-icon name="logo-github"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item">
-                  <a href="https://www.linkedin.com/in/eraianbu-rajkumar/" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item">
-                  <a href="https://www.instagram.com/erai22_official/" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-              </ul>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:eraianbu872@gmail.com" class="contact-link">eraianbu872@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+91 63824 84009" class="contact-link">+91 63824 84009</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">DOB</p>
+              <time datetime="2003-12-22">Dec 22, 2003</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Coimbatore, Tamil Nadu, India</address>
+            </div>
+          </li>
+          <li class="contact-item">
+            <a href="assets/Eraianbu R.pdf" download class="resume-download-link"
+              style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+              <div class="icon-box">
+                <ion-icon name="download-outline"></ion-icon>
               </div>
-      </aside>
-      <!-- #main-content-->
-      <div class="main-content">
-        <!--
+              <div class="contact-info">
+                <p class="contact-title">DOWNLOAD RESUME</p>
+                <p class="contact-subtitle">Click to Download My Resume</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <br>
+        <hr />
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/erai221203" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/eraianbu-rajkumar/" class="social-link" target="_blank"
+              rel="noopener noreferrer">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.instagram.com/erai22_official/" class="social-link" target="_blank"
+              rel="noopener noreferrer">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- #main-content-->
+    <div class="main-content">
+      <!--
           - #NAVBAR
         -->
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>Intro</button>
-            </li>
-            <li class="navbar-item">
-              <button class="navbar-link " data-nav-link>Skills</button>
-            </li>
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Projects</button>
-            </li>
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Cert</button>
-            </li>
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>Contact</button>
-            </li>
-            <!--
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>Intro</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link " data-nav-link>Skills</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Cert</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+          <!--
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Portfolio</button>
-            </li>-->      
-          </ul>
-        </nav>
-        <!--#ABOUT-->
-        <article class="intro active" data-page="intro">
-          <br>
-          <br>
-          <header><h2 class="h2 article-title">About me</h2></header>
-          <section class="about-text">
-            <p>
-              I'm passionate about building AI-driven solutions that address real-world challenges, with hands-on experience in computer vision, machine learning, and robotics. 
-              My journey includes innovative projects such as a solar tracking system and an AI-powered storyboard generator.
-              </p>
-            <p>
-              Currently pursuing a B.Tech in Artificial Intelligence and Data Science at Kumaraguru College 
-              of Technology (KCT), I’m specializing in Data Analytics and continuously exploring ways to turn data into impactful insights.
-              </p>
-              <p>  
-               In addition to my AI expertise, I’m also a Front-End Web Developer who enjoys crafting user-friendly, visually engaging 
-                websites. I strive to blend functionality with creative design to deliver meaningful and intuitive digital experiences.
-            </p>
+            </li>-->
+        </ul>
+      </nav>
+      <!--#ABOUT-->
+      <article class="intro active" data-page="intro">
+        <br>
+        <br>
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            I'm passionate about building AI-driven solutions that address real-world challenges, with hands-on
+            experience in computer vision, machine learning, and robotics.
+            My journey includes innovative projects such as a solar tracking system and an AI-powered storyboard
+            generator.
           </p>
-          </section>
-          <!--service-->
-          <section class="service">
-            <h3 class="h3 service-title">What I can</h3>
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img src="./assets/images/logo/CV.svg" alt="mobile app icon" width="40">
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">ML Model & CV</h4>
-                  <p class="service-item-text">
-                    Developing the Machine learning model for the testimonials and also the CV models.
-                  </p>
-                </div>
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img src="./assets/images/logo/automate.svg" alt="Web development icon" width="40">
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">RPA Automation </h4>
-                  <p class="service-item-text">
-                    Automate the softwares using UIPath Studio.
-                  </p>
-                </div>
-              </li>
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img src="./assets/images/logo/UIUX.svg" alt="design icon" width="40">
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title"> UI/UX Design</h4>
-                  <p class="service-item-text">
-                    The most modern and high-quality design made at a intermediate level on figma as required.
-                  </p>
-                </div>
-              </li>
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img src="./assets/images/logo/dev.svg" alt="Web development icon" width="40">
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Front end Web development</h4>
-                  <p class="service-item-text">
-                    Best development of websites at the intermediate level.
-                  </p>
-                </div>
-              </li>
-              </li>
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img src="./assets/images/logo/cad.svg" alt="camera icon" width="40">
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">CAD Model Designing</h4>
-                  <p class="service-item-text">
-                    I have professional expertise in 2D CAD design using AutoCAD and intermediate proficiency in 3D design using Fusion 360.
-                  </p>
-                </div>
-              </li>
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img src="./assets/images/logo/camera.svg" alt="camera icon" width="40">
-                </div>
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Photography</h4>
-                  <p class="service-item-text">
-                    Passionate about photography and videography, with hands-on experience in digital and social media marketing for my college department.</p>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <!--clients-->
-          <section class="clients">
-            <h3 class="h3 clients-title">Worked with..</h3>
-            <ul class="clients-list has-scrollbar">
-              <!-- <li class="clients-item">
+          <p>
+            Currently pursuing a B.Tech in Artificial Intelligence and Data Science at Kumaraguru College
+            of Technology (KCT), I’m specializing in Data Analytics and continuously exploring ways to turn data into
+            impactful insights.
+          </p>
+          <p>
+            In addition to my AI expertise, I’m also a Front-End Web Developer who enjoys crafting user-friendly,
+            visually engaging
+            websites. I strive to blend functionality with creative design to deliver meaningful and intuitive digital
+            experiences.
+          </p>
+        </section>
+        <!--service-->
+        <section class="service">
+          <h3 class="h3 service-title">What I can</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/logo/CV.svg" alt="mobile app icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">ML Model & CV</h4>
+                <p class="service-item-text">
+                  Developing the Machine learning model for the testimonials and also the CV models.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/logo/automate.svg" alt="Web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">RPA Automation </h4>
+                <p class="service-item-text">
+                  Automate the softwares using UIPath Studio.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/logo/UIUX.svg" alt="design icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title"> UI/UX Design</h4>
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a intermediate level on figma as required.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/logo/dev.svg" alt="Web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Front end Web development</h4>
+                <p class="service-item-text">
+                  Best development of websites at the intermediate level.
+                </p>
+              </div>
+            </li>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/logo/cad.svg" alt="camera icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CAD Model Designing</h4>
+                <p class="service-item-text">
+                  I have professional expertise in 2D CAD design using AutoCAD and intermediate proficiency in 3D design
+                  using Fusion 360.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/logo/camera.svg" alt="camera icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+                <p class="service-item-text">
+                  Passionate about photography and videography, with hands-on experience in digital and social media
+                  marketing for my college department.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!--clients-->
+        <section class="clients">
+          <h3 class="h3 clients-title">Worked with..</h3>
+          <ul class="clients-list has-scrollbar">
+            <!-- <li class="clients-item">
                 <a href="https://www.statsperform.com/">
                   <img src="./assets/images/clients/stats.webp" alt="client logo">
                 </a>
               </li> -->
-              <li class="clients-item">
-                <a href="https://kciri.kct.ac.in/">
-                  <img src="./assets/images/clients/KCIRI.png" alt="client logo">
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="https://ezon.in/">
-                  <img src="./assets/images/clients/Ezon.png" alt="client logo">
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="https://in.linkedin.com/company/forge-innovation-ventures">
-                  <img src="./assets/images/clients/forge.svg" alt="client logo">
-                </a>
-              </li>
-              <li class="clients-item">
-                <a href="https://in.linkedin.com/company/kal-m-robotics-and-innovations">
-                  <img src="./assets/images/clients/kalm.png" alt="client logo">
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
-        <!--My Skills-->
-        <article class="skills" data-page="skills">
-          <section class="skill">
-            <br>
-            <br>
-            <header><h2 class="h2 skill-title">My Skills</h2></header>
-            <br>
-            <h3 class="h3 skills-title">Tech Skills</h3>
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Machine Learning</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Computer vision</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">UIPath Studio</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Analysis</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Visualization</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Linux-RPi</h5>
-                  <data value="90">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">ROS2</h5>
-                  <data value="65">65%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 65%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">UI/UX Design - Figma</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Prompt Engineering</h5>
-                  <data value="80">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Autocad</h5>
-                  <data value="80">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Fusion 360</h5>
-                  <data value="80">60%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Front End web Development (HTML,CSS)</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%;"></div>
-                </div>
-              </li>      
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">MongoDB Atlas</h5>
-                  <data value="65">65%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 65%;"></div>
-                </div>
-              </li>
+            <li class="clients-item">
+              <a href="https://kciri.kct.ac.in/">
+                <img src="./assets/images/clients/KCIRI.png" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="https://ezon.in/">
+                <img src="./assets/images/clients/Ezon.png" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="https://in.linkedin.com/company/forge-innovation-ventures">
+                <img src="./assets/images/clients/forge.svg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="https://in.linkedin.com/company/kal-m-robotics-and-innovations">
+                <img src="./assets/images/clients/kalm.png" alt="client logo">
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--My Skills-->
+      <article class="skills" data-page="skills">
+        <section class="skill">
+          <br>
+          <br>
+          <header>
+            <h2 class="h2 skill-title">My Skills</h2>
+          </header>
+          <br>
+          <h3 class="h3 skills-title">Tech Skills</h3>
+          <ul class="skills-list content-card">
             <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Streamlit</h5>
-                  <data value="30">30%</data>
+              <div class="title-wrapper">
+                <h5 class="h5">Machine Learning</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Computer vision</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">UIPath Studio</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Data Analysis</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Data Visualization</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Linux-RPi</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">ROS2</h5>
+                <data value="65">65%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">UI/UX Design - Figma</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Prompt Engineering</h5>
+                <data value="80">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Autocad</h5>
+                <data value="80">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Fusion 360</h5>
+                <data value="80">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Front End web Development (HTML,CSS)</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">MongoDB Atlas</h5>
+                <data value="65">65%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Streamlit</h5>
+                <data value="30">30%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 30%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">API</h5>
+                <data value="40">40%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">GCP</h5>
+                <data value="30">45%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 45%;"></div>
+              </div>
+            </li>
+          </ul>
+          <h3 class="h3 skills-title">Programming Languages</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">My SQL</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">HTML, CSS</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">R</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+            </li>
+          </ul>
+          <h3 class="h3 skills-title">Soft Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Event Management</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">DJing</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Problem Solving</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Teamwork</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Leadership</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Critical Thinking</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+          </ul>
+          <h3 class="h3 skills-title">Hard Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Problem Solving</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Chess</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Autocad</h5>
+                <data value="80">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Fusion 360</h5>
+                <data value="80">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Data Analysis</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Data Visualization</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">PPT/Slides</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Excel/Sheets</h5>
+                <data value="50">50%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Event Management</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--#Project-->
+      <article class="projects" data-page="projects">
+        <br>
+        <br>
+        <header>
+          <h2 class="h2 testimonials-title">My Projects</h2>
+        </header>
+        <section class="testimonials">
+
+          <!--Project FaceIQ-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Katomaran" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>FaceIQ</h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Face Recognition Web App with Chatbot:
+                </h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;"> Katomaran Technologies Pvt Ltd.(May 2025):</p><br>
+                  <p>FaceIQ is an advanced face recognition web application that utilizes a live webcam feed to detect
+                    and
+                    identify faces in real-time. It draws bounding boxes and displays names on recognized faces as they
+                    appear in the frame. While the system processes video continuously, it requires initial user
+                    configuration
+                    or interaction to enable detection, making it semi-automated rather than fully automatic. The
+                    platform
+                    also features integration with a real-time AI Q&A system powered by Retrieval-Augmented Generation
+                    (RAG),
+                    allowing users to interact with the system for intelligent responses based on retrieved data.</p>
                 </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 30%;"></div>
+              </div>
+            </li>
+          </ol>
+          <!--Project EDION-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="me" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>E.D.I.O.N</h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Extensible Droid Intelligence for
+                  Omni-functional Navigation:</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;"> E.D.I.O.N (May 2025):</p><br>
+                  <p>A voice-controlled AI assistant inspired by JARVIS, built using Python, PyQt, and GPT4All for
+                    human-like interaction.
+                    Features include voice authentication, wake word detection, real-time OS control (Chrome, Notepad,
+                    volume, typing, etc.), and natural conversation via local LLMs.
+                    Integrated with speech recognition, translation, memory logging, and a persistent floating widget
+                    GUI for seamless user experience.</p>
                 </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">API</h5>
-                  <data value="40">40%</data>
+              </div>
+            </li>
+          </ol>
+          <!--Project Portfolio-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="web" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>Portfolio Dev</h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Personal Portfolio:</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;"> Personal Portfolio (May 2025):</p><br>
+                  <p style="color: white; font-weight: bold;"> Designed and deployed a responsive personal portfolio
+                    website using React (frontend) and Node.js (backend) in Cloudflare. Focused on
+                    delivering a smooth user experience with clean UI, optimized performance, and interactive features
+                    to effectively showcase my skills
+                    and projects..</p>
                 </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+            </li>
+          </ol>
+          <!--Project CRS-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="crs" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>Technical Lead</h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Cloud Radar System:</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;">Ezon Energy Solutions (P) Ltd (Apr 2024 - Mar 2025):</p>
+                  <br>
+                  <p>Developed an AI-powered dual-axis solar tracker using Raspberry Pi and OpenCV for real-time sun and
+                    cloud detection,
+                    optimizing panel orientation and boosting energy capture by 15-20% in cloudy conditions. Built a
+                    remote dashboard for
+                    live monitoring of panel position, cloud cover, and energy output.</p>
                 </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">GCP</h5>
-                  <data value="30">45%</data>
+              </div>
+            </li>
+          </ol>
+          <!--Project AMR-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="forge" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>Innovation Engineer</h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Autonomous Mobile Robot:</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;"> Forge Innovation & Ventures (Aug 2024 - Jan 2025):</p>
+                  <br>
+                  <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time
+                    obstacle avoidance
+                    for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and
+                    AutoCAD for precise 3D
+                    modeling and structural planning.</p>
                 </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 45%;"></div>
+              </div>
+            </li>
+          </ol>
+          <!--Project urban-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="forge" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>Technical Assistant</h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Wise-Ai-Thon:</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;"> Urban layout Designing with hybrid VAE-CGAN:</p><br>
+                  <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time
+                    obstacle avoidance
+                    for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and
+                    AutoCAD for precise 3D
+                    modeling and structural planning.</p>
                 </div>
-              </li>
-            </ul>
-            <h3 class="h3 skills-title">Programming Languages</h3>
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Python</h5>
-                  <data value="90">90%</data>
+              </div>
+            </li>
+          </ol>
+          <!--Project paper-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="ieee" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>Research and Technical Lead </h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Artistic Fusion: AI Powered Artistry for
+                  Story Boarding :</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;"> Paper Presentation - IEEE (Apr 2024 - Oct 2024):</p><br>
+                  <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time
+                    obstacle avoidance
+                    for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and
+                    AutoCAD for precise 3D
+                    modeling and structural planning.<br>
+                    <a class="form-btn" href="https://ieeexplore.ieee.org/abstract/document/10763187" target="_blank"
+                      rel="noopener noreferrer">
+                      <ion-icon name="paper-plane"></ion-icon>
+                      <span>Click here to check my paper</span></a>
                 </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+          </ol>
+          <!--Project codsoft-->
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="cod" width="60" data-testimonials-avatar>
+                </figure>
+                <h3 class="h3 testimonials-item-title" data-testimonials-title>ML Engineer </h3>
+                <h5 class="h5 testimonials-item-title" data-testimonials-title>Spam Detection, Churn Prediction, Movie
+                  genre classification :</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p style="color: white; font-weight: bold;">Codsoft (May 2024 - Jun 2024):</p> <br>
+                  <p>Developed machine learning models in Python for real-world classification tasks. Projects included
+                    spam detection, movie
+                    genre classification, and churn prediction. Utilized NLP, data preprocessing, and feature
+                    engineering techniques. Evaluated
+                    models using accuracy, precision, recall, and F1-score for reliability.
+                    <br>
                 </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">My SQL</h5>
-                  <data value="60">60%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 60%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">HTML, CSS</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">R</h5>
-                  <data value="60">60%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 60%;"></div>
-                </div>
-              </li>
-            </ul>
-            <h3 class="h3 skills-title">Soft Skills</h3>
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Event Management</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">DJing</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Problem Solving</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Teamwork</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Leadership</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Critical Thinking</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-            </ul>
-            <h3 class="h3 skills-title">Hard Skills</h3>
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Problem Solving</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Chess</h5>
-                  <data value="90">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Autocad</h5>
-                  <data value="80">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Fusion 360</h5>
-                  <data value="80">60%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Analysis</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Visualization</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">PPT/Slides</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Excel/Sheets</h5>
-                  <data value="50">50%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 50%;"></div>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Event Management</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%;"></div>
-                </div>
-              </li>
-            </ul> 
-          </section>
-        </article>
-     <!--#Project-->      
-          <article class="projects" data-page="projects">
-            <br>
-            <br>
-            <header><h2 class="h2 testimonials-title">My Projects</h2></header>
-                <section class="testimonials">    
-                  
-                    <!--Project FaceIQ-->
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                          <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="Katomaran" width="60" data-testimonials-avatar>
-                          </figure>
-                          <h3 class="h3 testimonials-item-title" data-testimonials-title>FaceIQ</h3>
-                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Face Recognition Web App with Chatbot:</h5>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <p style="color: white; font-weight: bold;"> Katomaran Technologies Pvt Ltd.(May 2025):</p><br> 
-                            <p>FaceIQ is an advanced face recognition web application that utilizes a live webcam feed to detect and 
-                              identify faces in real-time. It draws bounding boxes and displays names on recognized faces as they 
-                              appear in the frame. While the system processes video continuously, it requires initial user configuration
-                                or interaction to enable detection, making it semi-automated rather than fully automatic. The platform 
-                                also features integration with a real-time AI Q&A system powered by Retrieval-Augmented Generation (RAG), 
-                                allowing users to interact with the system for intelligent responses based on retrieved data.</p>
-                           </div>
-                        </div>
-                      </li>
-                    </ol>  
-                    <!--Project EDION-->
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                          <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="me" width="60" data-testimonials-avatar>
-                          </figure>
-                          <h3 class="h3 testimonials-item-title" data-testimonials-title>E.D.I.O.N</h3>
-                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Extensible Droid Intelligence for Omni-functional Navigation:</h5>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <p style="color: white; font-weight: bold;"> E.D.I.O.N (May 2025):</p><br> 
-                            <p>A voice-controlled AI assistant inspired by JARVIS, built using Python, PyQt, and GPT4All for human-like interaction.
-                Features include voice authentication, wake word detection, real-time OS control (Chrome, Notepad, volume, typing, etc.), and natural conversation via local LLMs.
-                Integrated with speech recognition, translation, memory logging, and a persistent floating widget GUI for seamless user experience.</p>
-                           </div>
-                        </div>
-                      </li>
-                    </ol>  
-                    <!--Project Portfolio-->
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                          <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="web" width="60" data-testimonials-avatar>
-                          </figure>
-                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Portfolio Dev</h3>
-                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Personal Portfolio:</h5>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <p style="color: white; font-weight: bold;"> Personal Portfolio (May 2025):</p><br> 
-                            <p style="color: white; font-weight: bold;"> Designed and deployed a responsive personal portfolio website using React (frontend) and Node.js (backend) in Cloudflare. Focused on
-                                delivering a smooth user experience with clean UI, optimized performance, and interactive features to effectively showcase my skills
-                                and projects..</p>
-                          </div>
-                        </div>
-                      </li>
-                    </ol>                    
-                  <!--Project CRS-->
-                  <ol class="testimonials-list has-scrollbar">
-                    <li class="testimonials-item">
-                      <div class="content-card" data-testimonials-item>
-                        <figure class="testimonials-avatar-box">
-                          <img src="./assets/images/avatar-1.png" alt="crs" width="60" data-testimonials-avatar>
-                        </figure>
-                        <h3 class="h3 testimonials-item-title" data-testimonials-title>Technical Lead</h3>  
-                        <h5 class="h5 testimonials-item-title" data-testimonials-title>Cloud Radar System:</h5>                      
-                        <div class="testimonials-text" data-testimonials-text>
-                           <p style="color: white; font-weight: bold;">Ezon Energy Solutions (P) Ltd (Apr 2024 - Mar 2025):</p><br> 
-                           <p>Developed an AI-powered dual-axis solar tracker using Raspberry Pi and OpenCV for real-time sun and cloud detection,
-                            optimizing panel orientation and boosting energy capture by 15-20% in cloudy conditions. Built a remote dashboard for
-                            live monitoring of panel position, cloud cover, and energy output.</p>
-                        </div>
-                      </div>
-                    </li>
-                  </ol>
-                    <!--Project AMR-->
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                          <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="forge" width="60" data-testimonials-avatar>
-                          </figure>
-                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Innovation Engineer</h3>
-                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Autonomous Mobile Robot:</h5>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <p style="color: white; font-weight: bold;"> Forge Innovation & Ventures (Aug 2024 - Jan 2025):</p><br> 
-                            <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time obstacle avoidance
-                                  for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and AutoCAD for precise 3D
-                                  modeling and structural planning.</p>
-                          </div>
-                        </div>
-                      </li>
-                    </ol>                
-                    <!--Project urban-->
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                          <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="forge" width="60" data-testimonials-avatar>
-                          </figure>
-                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Technical Assistant</h3>
-                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Wise-Ai-Thon:</h5>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <p style="color: white; font-weight: bold;"> Urban layout Designing with hybrid VAE-CGAN:</p><br> 
-                            <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time obstacle avoidance
-                                  for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and AutoCAD for precise 3D
-                                  modeling and structural planning.</p>
-                          </div>
-                        </div>
-                      </li>
-                    </ol>
-                    <!--Project paper-->
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                          <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="ieee" width="60" data-testimonials-avatar>
-                          </figure>
-                          <h3 class="h3 testimonials-item-title" data-testimonials-title>Research and Technical Lead </h3>
-                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Artistic Fusion: AI Powered Artistry for Story Boarding :</h5>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <p style="color: white; font-weight: bold;"> Paper Presentation - IEEE (Apr 2024 - Oct 2024):</p><br> 
-                            <p>Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time obstacle avoidance
-                                  for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and AutoCAD for precise 3D
-                                  modeling and structural planning.<br>
-                                  <a class="form-btn" href="https://ieeexplore.ieee.org/abstract/document/10763187" target="_blank" rel="noopener noreferrer">
-                                      <ion-icon name="paper-plane"></ion-icon>
-                                      <span>Click here to check my paper</span></a>
-                          </div>
-                        </div>
-                      </li>
-                    </ol>
-                    <!--Project codsoft-->
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                          <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="cod" width="60" data-testimonials-avatar>
-                          </figure>
-                          <h3 class="h3 testimonials-item-title" data-testimonials-title>ML Engineer </h3>
-                          <h5 class="h5 testimonials-item-title" data-testimonials-title>Spam Detection, Churn Prediction, Movie genre classification :</h5>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <p style="color: white; font-weight: bold;">Codsoft (May 2024 - Jun 2024):</p> <br>
-                            <p>Developed machine learning models in Python for real-world classification tasks. Projects included spam detection, movie
-                                genre classification, and churn prediction. Utilized NLP, data preprocessing, and feature engineering techniques. Evaluated
-                                models using accuracy, precision, recall, and F1-score for reliability.
-                                <br>
-                          </div>
-                        </div>
-                      </li>
-                    </ol>
-                    
-                    <ol class="testimonials-list has-scrollbar">
-                      <li class="testimonials-item">
-                        <div class="content-card" data-testimonials-item>
-                         <!-- <figure class="testimonials-avatar-box">
+              </div>
+            </li>
+          </ol>
+
+          <ol class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <!-- <figure class="testimonials-avatar-box">
                             <img src="./assets/images/avatar-1.png" alt="hack" width="60" data-testimonials-avatar>
                           </figure>
                           <h3 class="h3 testimonials-item-title" data-testimonials-title></h3>                          
                           <h5 class="h5 testimonials-item-title" data-testimonials-title></h5>-->
-                          <div class="modal-content">
-                            <h4 class="h4 modal-title" data-modal-title></h4>
-                            <time datetime="2024-12-22"></time></div>
-                          <div class="testimonials-text" data-testimonials-text>
-                            <h3 style="color: white; font-weight: bold;"> </h3><br> 
-                          </div>
-                        </div>
-                      </li>
-                    </ol>
-                </section>
-                <!--testimonials modal-->
-                <div class="modal-container" data-modal-container>
-                  <div class="overlay" data-overlay></div>
-                  <section class="testimonials-modal">
-                    <button class="modal-close-btn" data-modal-close-btn>
-                      <ion-icon name="close-outline"></ion-icon>
-                    </button>
-                    <div class="modal-img-wrapper">
-                      <figure class="modal-avatar-box">
-                        <img src="./assets/images/avatar-1.png" alt="crs" width="80" data-modal-img>
-                      </figure>
-                      <img src="./assets/images/icon-quote.svg" alt="quote icon">
-                    </div>
-                    <div class="modal-content">
-                      <h4 class="h4 testimonials-item-title.crs" data-testimonials-title> </h4>
-                          
-                      <time datetime="2024-12-22"></time>
-                      <div data-modal-text></div>
-                    </div>
-                    <div class="overlay" data-overlay></div>
-                  </section>              
+                <div class="modal-content">
+                  <h4 class="h4 modal-title" data-modal-title></h4>
+                  <time datetime="2024-12-22"></time>
                 </div>
-            </article>
-        <!--
+                <div class="testimonials-text" data-testimonials-text>
+                  <h3 style="color: white; font-weight: bold;"> </h3><br>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+        <!--testimonials modal-->
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="crs" width="80" data-modal-img>
+              </figure>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+            <div class="modal-content">
+              <h4 class="h4 testimonials-item-title.crs" data-testimonials-title> </h4>
+
+              <time datetime="2024-12-22"></time>
+              <div data-modal-text></div>
+            </div>
+            <div class="overlay" data-overlay></div>
+          </section>
+        </div>
+      </article>
+      <!--
           - #RESUME
         -->
-        <article class="resume" data-page="resume">
-          <br>
-          <br>
-          <header class="resume-header"><h2 class="h2 article-title">Resume</h2></header>
-          <section class="about-section">
-            <div class="about-content">
-              <div class="title-wrapper">
+      <article class="resume" data-page="resume">
+        <br>
+        <br>
+        <header class="resume-header">
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+        <section class="about-section">
+          <div class="about-content">
+            <div class="title-wrapper">
               <div class="icon-box">
                 <ion-icon name="book-outline"></ion-icon>
               </div>
               <h3 class="h3">About Me</h3>
             </div>
-              <p>
-              I am passionate about creating AI-driven solutions to solve real-world problems, with experience in computer vision, machine learning, and robotics. 
-              My testimonials include innovations like an AI-powered storyboard generator and drone-based crop monitoring systems.
-              </p>
             <p>
-              I'm a Front-End Web Developer from Tamil Nadu, India, currently pursuing B.Tech in 
-              Artificial Intelligence and Data Science at Kumaraguru College of Technology (KCT) and specializing in Data Analytics.
-              </p>
-              <p>  
-                I also excel in designing user-friendly, visually appealing websites, combining 
-                functionality with creativity to deliver impactful digital solutions.
+              I am passionate about creating AI-driven solutions to solve real-world problems, with experience in
+              computer vision, machine learning, and robotics.
+              My testimonials include innovations like an AI-powered storyboard generator and drone-based crop
+              monitoring systems.
             </p>
-          </p>
-            </div> 
-            <div class="about-image fade-in">
-              <img  src="./assets/images/me/me.svg" alt="Portrait of Eraianbu Rajkumar">
-            </div>
+            <p>
+              I'm a Front-End Web Developer from Tamil Nadu, India, currently pursuing B.Tech in
+              Artificial Intelligence and Data Science at Kumaraguru College of Technology (KCT) and specializing in
+              Data Analytics.
+            </p>
+            <p>
+              I also excel in designing user-friendly, visually appealing websites, combining
+              functionality with creativity to deliver impactful digital solutions.
+            </p>
+            </p>
+          </div>
+          <div class="about-image fade-in">
+            <img src="./assets/images/me/me.svg" alt="Portrait of Eraianbu Rajkumar">
+          </div>
 
-          </section>
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-              <h3 class="h3">Education</h3>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-            <ul class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Kumaraguru College of Technology</h4>
-                <span>2022 — Present</span>
-                <p class="timeline-text">
-                  Dept- BTech Artificial Intelligence and Data Sciencce<br> 
-                  CGPA- 8.01 (Till 5th semester)
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">The Vijay Millennium SR Sec School,Krishnagiri </h4>
-                <span>2020 — 2022</span>
-                <p class="timeline-text">
-                  Persued the highers of class 11th and class 12th.<br>
-                  Secured 74.5% in 12th standard.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Sri Vijay Vidyalaya Boys HR Sec School, DPI</h4>
-                <span>2019 — 2020</span>
-                <p class="timeline-text">
-                  Persued class 10th.<br>
-                  Secured 96.4% in 10th standard.
-                </p>
-              </li>
-            </ul>
-          </section>
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-              <h3 class="h3">Experience</h3>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Kumaraguru College of Technology</h4>
+              <span>2022 — Present</span>
+              <p class="timeline-text">
+                Dept- BTech Artificial Intelligence and Data Science<br>
+                CGPA- 8.01 (Till 5th semester)
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">The Vijay Millennium SR Sec School,Krishnagiri </h4>
+              <span>2020 — 2022</span>
+              <p class="timeline-text">
+                Pursued higher secondary of class 11th and class 12th.<br>
+                Secured 74.5% in 12th standard.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Sri Vijay Vidyalaya Boys HR Sec School, DPI</h4>
+              <span>2019 — 2020</span>
+              <p class="timeline-text">
+                Pursued class 10th.<br>
+                Secured 96.4% in 10th standard.
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Quality Assurance Intelligence Intern</h4>
-                <span>Oct 2025 — Present</span>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Quality Assurance Intelligence Intern</h4>
+              <span>Oct 2025 — Present</span>
+              <p class="timeline-text">
+                Quality Assurance Team.<Br>
+                Stats Perform, Bengaluru ,India.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Vice President</h4>
+              <span>Aug 2025 — Present</span>
+              <p class="timeline-text">
+                Department of Artificial Intelligence and Data Science.<Br>
+                Kumaraguru College of Technology.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Alumni Ambassador</h4>
+              <span>Oct 2024 — Present</span>
+              <p class="timeline-text">
+                Department of Artificial Intelligence and Data Science.<Br>
+                Kumaraguru College of Technology.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <a href="https://ieeexplore.ieee.org/document/11183242" target="_blank"
+                style="text-decoration: none; color: inherit;">
+                <h4 class="h4 timeline-item-title">CRS-Paper Presentation - IEEE</h4>
+                <span>Apr 2024 — Mar 2025</span>
                 <p class="timeline-text">
-                  Quality Assurance Team.<Br>
-                    Stats Perform, Bengaluru ,India.
+                  AI-Driven Solar Panel Optimization during Cloudy times Using Real-Time Image Processing<br>
+                  IEEE Paper Presentation
                 </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Vice President</h4>
-                <span>Aug 2025 — Present</span>
-                <p class="timeline-text">
-                  Department of Artificial Intelligence and Data Science.<Br>
-                    Kumaraguru College of Technology.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Alumni Ambassador</h4>
-                <span>Oct 2024 — Present</span>
-                <p class="timeline-text">
-                  Department of Artificial Intelligence and Data Science.<Br>
-                    Kumaraguru College of Technology.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <a href="https://ieeexplore.ieee.org/document/11183242" target="_blank" style="text-decoration: none; color: inherit;">
-                  <h4 class="h4 timeline-item-title">CRS-Paper Presentation - IEEE</h4>
-                  <span>Apr 2024 — Mar 2025</span>
-                  <p class="timeline-text">
-                    AI-Driven Solar Panel Optimization during Cloudy times Using Real-Time Image Processing<br>
-                    IEEE Paper Presentation
-                  </p>
-                </a>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Treasurer</h4>
-                <span>Aug 2024 — Aug 2025</span>
-                <p class="timeline-text">
-                  Department Association of Artificial Intelligence and Data Science.<br>
-                  Kumaraguru College of Technology.
-                </p>
-              </li>
-              
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Technical Lead</h4>
-                <span>April 2024 — March 2025</span>
-                <p class="timeline-text">
-                  CRS Project with the company Ezon Energy Solutions (P) Ltd.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Innovation Engineer - Intern</h4>
-                <span>Aug 2024 — Dec 2024</span>
-                <p class="timeline-text">
+              </a>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Treasurer</h4>
+              <span>Aug 2024 — Aug 2025</span>
+              <p class="timeline-text">
+                Department Association of Artificial Intelligence and Data Science.<br>
+                Kumaraguru College of Technology.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Technical Lead</h4>
+              <span>April 2024 — March 2025</span>
+              <p class="timeline-text">
+                CRS Project with the company Ezon Energy Solutions (P) Ltd.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Innovation Engineer - Intern</h4>
+              <span>Aug 2024 — Dec 2024</span>
+              <p class="timeline-text">
                 Forge Innovation and Ventures
-                </p>
-              </li> 
-              <li class="timeline-item">
-                <a href="https://ieeexplore.ieee.org/document/10763187" target="_blank" style="text-decoration: none; color: inherit;">
-                  <h4 class="h4 timeline-item-title">Paper Presentation - IEEE</h4>
-                  <span>Apr 2024 — Oct 2024</span>
-                  <p class="timeline-text">
-                    Artistic Fusion: AI Powered Artistry for Story Boarding<br>
-                    IEEE Paper Presentation
-                  </p>
-                </a>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">ML Engineer -Intern</h4>
-                <span>May 2024 — June 2024</span>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <a href="https://ieeexplore.ieee.org/document/10763187" target="_blank"
+                style="text-decoration: none; color: inherit;">
+                <h4 class="h4 timeline-item-title">Paper Presentation - IEEE</h4>
+                <span>Apr 2024 — Oct 2024</span>
                 <p class="timeline-text">
+                  Artistic Fusion: AI Powered Artistry for Story Boarding<br>
+                  IEEE Paper Presentation
+                </p>
+              </a>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">ML Engineer -Intern</h4>
+              <span>May 2024 — June 2024</span>
+              <p class="timeline-text">
                 Virtual Internship @Codsoft.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Executive Member</h4>
-                <span>Oct 2023 — Aug 2024</span>
-                <p class="timeline-text">
-                  Department Association of Artificial Intelligence and Data Science.<br>
-                  Kumaraguru College of Technology.
-                </p>
-              </li>
-            </ol>
-          </section>
-           <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-              <h3 class="h3">Projects</h3>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Executive Member</h4>
+              <span>Oct 2023 — Aug 2024</span>
+              <p class="timeline-text">
+                Department Association of Artificial Intelligence and Data Science.<br>
+                Kumaraguru College of Technology.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-            <ol class="timeline-list">
-              
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">FaceIQ- Face Recognition Web App with Chatbot</h5>
-                <span>May 2025</span>
-                <p class="timeline-text">
-                 FaceIQ is an advanced face recognition web application that utilizes a live webcam feed to detect and 
-                 identify faces in real-time. It draws bounding boxes and displays names on recognized faces as they 
-                 appear in the frame. While the system processes video continuously, it requires initial user configuration
-                  or interaction to enable detection, making it semi-automated rather than fully automatic. The platform 
-                  also features integration with a real-time AI Q&A system powered by Retrieval-Augmented Generation (RAG), 
-                  allowing users to interact with the system for intelligent responses based on retrieved data.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">E.D.I.O.N AI - Extensible Droid Intelligence for Omni-functional Navigation</h5>
-                <span>May 2025</span>
-                <p class="timeline-text">
-                 A voice-controlled AI assistant inspired by JARVIS, built using Python, PyQt, and GPT4All for human-like interaction.
-                Features include voice authentication, wake word detection, real-time OS control (Chrome, Notepad, volume, typing, etc.), and natural conversation via local LLMs.
-                Integrated with speech recognition, translation, memory logging, and a persistent floating widget GUI for seamless user experience.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">Portfolio Development</h5>
-                <span>2024 - Present</span>
-                <p class="timeline-text">
-                  Designed and Deployed a responsive personal portfolio website using React (frontend) and Node.js (backend) in Cloudflare. Focused on
-                  delivering a smooth user experience with clean UI, optimized performance, and interactive features to effectively showcase my skills and projects.
-                 </p>
-              </li>
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">Cloud Radar System - Ezon Energy Solutions (P) Ltd</h5>
-                <span>Apr 2024 - Mar 2025</span>
-                <p class="timeline-text">
-                 Developed an AI-powered dual-axis solar tracker using Raspberry Pi and OpenCV for real-time sun and cloud detection,
-                  optimizing panel orientation and boosting energy capture by 15-20% in cloudy conditions. Built a remote dashboard for
-                  live monitoring of panel position, cloud cover, and energy output.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">Autonomous Mobile Robot - Forge Innovation and Ventures</h5>
-                <span>Aug 2024 - Jan 2025</span>
-                <p class="timeline-text">
-                 Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time obstacle avoidance
-                  for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and AutoCAD for precise 3D
-                  modeling and structural planning.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">Urban layout Designing with hybrid VAE-CGAN - Wise-Ai-Thon</h5>
-                <p class="timeline-text">
-                 Developed a hybrid generative model to create urban layouts optimized for environmental constraints and sustainability.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">Paper Presentation - IEEE </h5>
-                <span>Apr 2024 - Oct 2024</span>
-                <p class="timeline-text">
-                 Presented paper titled on “Artistic Fusion:AI Powered Artistry for Story Boarding “ 4th International Conference on Sustainable Expert Systems " - 15 -17 Oct,2024
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h5 class="h5 timeline-item-title">ML Engineer - Codsoft </h5>
-                <span>May 2024 - Jun 2024</span>
-                <p class="timeline-text">
-                 Developed machine learning models in Python for real-world classification tasks. Projects included spam detection, movie
-                  genre classification, and churn prediction. Utilized NLP, data preprocessing, and feature engineering techniques. Evaluated
-                  models using accuracy, precision, recall, and F1-score for reliability.</p>
-              </li>  
-            </ol>
-          </section>
-          <section class="skill">
-            <section class="timeline">
+            <h3 class="h3">Projects</h3>
+          </div>
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">FaceIQ- Face Recognition Web App with Chatbot</h5>
+              <span>May 2025</span>
+              <p class="timeline-text">
+                FaceIQ is an advanced face recognition web application that utilizes a live webcam feed to detect and
+                identify faces in real-time. It draws bounding boxes and displays names on recognized faces as they
+                appear in the frame. While the system processes video continuously, it requires initial user
+                configuration
+                or interaction to enable detection, making it semi-automated rather than fully automatic. The platform
+                also features integration with a real-time AI Q&A system powered by Retrieval-Augmented Generation
+                (RAG),
+                allowing users to interact with the system for intelligent responses based on retrieved data.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">E.D.I.O.N AI - Extensible Droid Intelligence for Omni-functional
+                Navigation</h5>
+              <span>May 2025</span>
+              <p class="timeline-text">
+                A voice-controlled AI assistant inspired by JARVIS, built using Python, PyQt, and GPT4All for human-like
+                interaction.
+                Features include voice authentication, wake word detection, real-time OS control (Chrome, Notepad,
+                volume, typing, etc.), and natural conversation via local LLMs.
+                Integrated with speech recognition, translation, memory logging, and a persistent floating widget GUI
+                for seamless user experience.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">Portfolio Development</h5>
+              <span>2024 - Present</span>
+              <p class="timeline-text">
+                Designed and Deployed a responsive personal portfolio website using React (frontend) and Node.js
+                (backend) in Cloudflare. Focused on
+                delivering a smooth user experience with clean UI, optimized performance, and interactive features to
+                effectively showcase my skills and projects.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">Cloud Radar System - Ezon Energy Solutions (P) Ltd</h5>
+              <span>Apr 2024 - Mar 2025</span>
+              <p class="timeline-text">
+                Developed an AI-powered dual-axis solar tracker using Raspberry Pi and OpenCV for real-time sun and
+                cloud detection,
+                optimizing panel orientation and boosting energy capture by 15-20% in cloudy conditions. Built a remote
+                dashboard for
+                live monitoring of panel position, cloud cover, and energy output.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">Autonomous Mobile Robot - Forge Innovation and Ventures</h5>
+              <span>Aug 2024 - Jan 2025</span>
+              <p class="timeline-text">
+                Developed a ROS2-based AI navigation system with smart path planning, sensor fusion, and real-time
+                obstacle avoidance
+                for intelligent material handling. Designed the robot chassis and full design using Fusion 360 and
+                AutoCAD for precise 3D
+                modeling and structural planning.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">Urban layout Designing with hybrid VAE-CGAN - Wise-Ai-Thon</h5>
+              <p class="timeline-text">
+                Developed a hybrid generative model to create urban layouts optimized for environmental constraints and
+                sustainability.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">Paper Presentation - IEEE </h5>
+              <span>Apr 2024 - Oct 2024</span>
+              <p class="timeline-text">
+                Presented paper titled on “Artistic Fusion:AI Powered Artistry for Story Boarding “ 4th International
+                Conference on Sustainable Expert Systems " - 15 -17 Oct,2024
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h5 class="h5 timeline-item-title">ML Engineer - Codsoft </h5>
+              <span>May 2024 - Jun 2024</span>
+              <p class="timeline-text">
+                Developed machine learning models in Python for real-world classification tasks. Projects included spam
+                detection, movie
+                genre classification, and churn prediction. Utilized NLP, data preprocessing, and feature engineering
+                techniques. Evaluated
+                models using accuracy, precision, recall, and F1-score for reliability.</p>
+            </li>
+          </ol>
+        </section>
+        <section class="skill">
+          <section class="timeline">
             <div class="title-wrapper">
               <div class="icon-box">
                 <ion-icon name="book-outline"></ion-icon>
@@ -1170,7 +1242,7 @@
                 <div class="skill-progress-bg">
                   <div class="skill-progress-fill" style="width: 85%;"></div>
                 </div>
-              </li>      
+              </li>
               <li class="skills-item">
                 <div class="title-wrapper">
                   <h5 class="h5">MongoDB Atlas</h5>
@@ -1180,7 +1252,7 @@
                   <div class="skill-progress-fill" style="width: 65%;"></div>
                 </div>
               </li>
-            <li class="skills-item">
+              <li class="skills-item">
                 <div class="title-wrapper">
                   <h5 class="h5">Streamlit</h5>
                   <data value="30">30%</data>
@@ -1387,457 +1459,465 @@
                   <div class="skill-progress-fill" style="width: 70%;"></div>
                 </div>
               </li>
-            </ul> 
+            </ul>
           </section>
-        </article>
-        <!--
+      </article>
+      <!--
           - #PORTFOLIO
         -->
-        <article class="portfolio" data-page="portfolio">
-          <header>
-            <h2 class="h6 article-title">Portfolio</h2>
-          </header>
-          <section class="testimonials">
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h6 article-title">Portfolio</h2>
+        </header>
+        <section class="testimonials">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+          </ul>
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
               </li>
-              <li class="filter-item">
-                <button data-filter-btn>Web design</button>
+              <li class="select-item">
+                <button data-select-item>Web design</button>
               </li>
-              <li class="filter-item">
-                <button data-filter-btn>Applications</button>
+              <li class="select-item">
+                <button data-select-item>Applications</button>
               </li>
-              <li class="filter-item">
-                <button data-filter-btn>Web development</button>
-              </li>
-            </ul>
-            <div class="filter-select-box">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>Select category</div>
-                <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
-                </div>
-              </button>
-              <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Web design</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Applications</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Web development</button>
-                </li>
-              </ul>
-            </div>
-            <ul class="project-list">
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">Finance</h3>
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">Orizon</h3>
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="web design">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">Fundo</h3>
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="applications">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">Brawlhalla</h3>
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="web design">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                  </figure>
-                  <h3 class="project-title">DSM.</h3>
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="web design">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">MetaSpark</h3>
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">Summary</h3>
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="applications">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">Task Manager</h3>
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                  </figure>
-                  <h3 class="project-title">Arrival</h3>
-                  <p class="project-category">Web development</p>
-                </a>
+              <li class="select-item">
+                <button data-select-item>Web development</button>
               </li>
             </ul>
-          </section>
-        </article>
-        <!--#BLOG-->
-        <article class="cert" data-page="cert">
-          <br>
-          <br>
-          <header> <h2 class="h2 article-title">My Certificates</h2> </header>
-          <section class="blog-posts">
-            <ul class="blog-posts-list">
-              
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/CRS.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/CRS.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">KCT-KCIRI-Ezon</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Apr, 2025</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Cloud Radar System </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
+          </div>
+          <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/Protosem.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/Protosem.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Forge Innovation & Ventures</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Jan, 2025</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Autonomous Mobile Robot </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li> 
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/Award.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/Award.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">KI-Dept of AI & DS</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Apr, 2026</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Dept Recognition Award - Best Volunteer </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="https://www.udemy.com/certificate/UC-15189e34-4140-4159-b9b7-7cae09ffb38a/"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/Web dev.svg" alt="WEB" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Udemy</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">May 31, 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title">Web Development</h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="https://olympus.mygreatlearning.com/courses/11265/certificate?pb_id=581"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/DATA SCIENCE WITH PYTHON.svg" alt="DS" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category"> Great Learning</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Apr, 2023</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Data Science with Python </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="https://www.udemy.com/certificate/UC-f4085bee-232c-4f12-b8a8-1d3e5ad43201/"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/Ros2.svg" alt="ROS2" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category"> Udemy</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Mar 26, 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> ROS2 For Beginners  </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/wiseaithon24.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/wiseaithon24.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">KSI</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Sep 10 & 11, 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Wise-AI-Thon-2024   </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/Terra Nova.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/Terra Nova.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">KCT-IEEE</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">May 24, 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Terra Nova Hackathon   </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/SIH2023.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/SIH2023.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Forge Innovation & Ventures-SIH</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Dec, 2023</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> SIHH-2023 Volunteering   </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/SIH2023.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/SIH2023.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Forge Innovation & Ventures-SIH</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Dec, 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> SIHH-2024 Volunteering   </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/Robotics workshop.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/Robotics workshop.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">KSI-Entudio</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Apr 4, 5 & 6 , 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Robotics and Drones Workshop   </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/codsoft.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/codsoft.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Codsoft</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">May 5 to June 5 , 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> ML Engineer Intern </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/genAi.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/genAi.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">KCT-Dept of AI & DS</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">May 7, 2024</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Gen AI -Hands on with Transformers   </h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-              <li class="blog-post-item">
-                <a href="./assets/images/Cert/infosys.svg"  target="_blank" rel="noopener noreferrer">
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/Cert/infosys.svg" alt="wise" loading="lazy">
-                  </figure>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Infosys</p>
-                      <span class="dot"></span>
-                      <time datetime="2022-02-23">Nov 27, 2023</time>
-                    </div>
-                    <h3 class="h3 blog-item-title"> Python Programming Advanced</h3>
-                    <p class="blog-text" >Click to check my certificate</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
-        <!--#CONTACT-->
-        <article class="contact" data-page="contact">
-          <br>
-          <header> <h2 class="h2 article-title">Contact </h2> </header>
-          <section class="mapbox" data-mapbox>
-            <figure>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125535.24431530797!2d77.49757500624157!3d11.0168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0db49a1c7c5b%3A0xd56d8a70a9b3d337!2sCoimbatore%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1647608789441!5m2!1sen!2sin"
-                width="400" height="300" loading="lazy"> 
-              </iframe>
-            </figure>
-          </section>
-          <section class="contact-form">
-            <h3 class="h3 form-title">Contact Me</h3>
-            <form class="form" data-form id="contact-form">
-              <a class="form-btn" href="https://forms.gle/t1jQAbFXAj43Yd3B6" target="_blank" rel="noopener noreferrer">
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>SAY HELLO HERE</span>
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+                <h3 class="project-title">Finance</h3>
+                <p class="project-category">Web development</p>
               </a>
-            </form>
-          </section>
-        </article>      
-      </div>
-    </main>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const skills = document.querySelectorAll('.skills-item');
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+                <h3 class="project-title">Orizon</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+                <h3 class="project-title">Fundo</h3>
+                <p class="project-category">Web design</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+                <h3 class="project-title">Brawlhalla</h3>
+                <p class="project-category">Applications</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+                <h3 class="project-title">DSM.</h3>
+                <p class="project-category">Web design</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+                <h3 class="project-title">MetaSpark</h3>
+                <p class="project-category">Web design</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+                <h3 class="project-title">Summary</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+                <h3 class="project-title">Task Manager</h3>
+                <p class="project-category">Applications</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+                <h3 class="project-title">Arrival</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--#BLOG-->
+      <article class="cert" data-page="cert">
+        <br>
+        <br>
+        <header>
+          <h2 class="h2 article-title">My Certificates</h2>
+        </header>
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
 
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            const fill = entry.target.querySelector('.skill-progress-fill');
-            const data = entry.target.querySelector('data');
-            const value = data.getAttribute('value') + '%';
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/CRS.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/CRS.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">KCT-KCIRI-Ezon</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Apr, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Cloud Radar System </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/Protosem.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/Protosem.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Forge Innovation & Ventures</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Jan, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Autonomous Mobile Robot </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/Award.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/Award.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">KI-Dept of AI & DS</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Apr, 2026</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Dept Recognition Award - Best Volunteer </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="https://www.udemy.com/certificate/UC-15189e34-4140-4159-b9b7-7cae09ffb38a/" target="_blank"
+                rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/Web dev.svg" alt="WEB" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Udemy</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">May 31, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Web Development</h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="https://olympus.mygreatlearning.com/courses/11265/certificate?pb_id=581" target="_blank"
+                rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/DATA SCIENCE WITH PYTHON.svg" alt="DS" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category"> Great Learning</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Apr, 2023</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Data Science with Python </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="https://www.udemy.com/certificate/UC-f4085bee-232c-4f12-b8a8-1d3e5ad43201/" target="_blank"
+                rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/Ros2.svg" alt="ROS2" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category"> Udemy</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Mar 26, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> ROS2 For Beginners </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/wiseaithon24.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/wiseaithon24.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">KSI</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Sep 10 & 11, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Wise-AI-Thon-2024 </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/Terra Nova.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/Terra Nova.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">KCT-IEEE</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">May 24, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Terra Nova Hackathon </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/SIH2023.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/SIH2023.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Forge Innovation & Ventures-SIH</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Dec, 2023</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> SIHH-2023 Volunteering </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/SIH2023.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/SIH2023.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Forge Innovation & Ventures-SIH</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Dec, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> SIHH-2024 Volunteering </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/Robotics workshop.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/Robotics workshop.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">KSI-Entudio</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Apr 4, 5 & 6 , 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Robotics and Drones Workshop </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/codsoft.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/codsoft.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Codsoft</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">May 5 to June 5 , 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> ML Engineer Intern </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/genAi.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/genAi.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">KCT-Dept of AI & DS</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">May 7, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Gen AI -Hands on with Transformers </h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="./assets/images/Cert/infosys.svg" target="_blank" rel="noopener noreferrer">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Cert/infosys.svg" alt="wise" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Infosys</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Nov 27, 2023</time>
+                  </div>
+                  <h3 class="h3 blog-item-title"> Python Programming Advanced</h3>
+                  <p class="blog-text">Click to check my certificate</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--#CONTACT-->
+      <article class="contact" data-page="contact">
+        <br>
+        <header>
+          <h2 class="h2 article-title">Contact </h2>
+        </header>
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125535.24431530797!2d77.49757500624157!3d11.0168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0db49a1c7c5b%3A0xd56d8a70a9b3d337!2sCoimbatore%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1647608789441!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy">
+            </iframe>
+          </figure>
+        </section>
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Me</h3>
+          <form class="form" data-form id="contact-form">
+            <a class="form-btn" href="https://forms.gle/t1jQAbFXAj43Yd3B6" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>SAY HELLO HERE</span>
+            </a>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const skills = document.querySelectorAll('.skills-item');
 
-            if (entry.isIntersecting) {
-              // Grow the bar
-              fill.style.width = value;
-            } else {
-              // Reset the bar when it leaves view
-              fill.style.width = '0%';
-            }
-          });
-        }, {
-          threshold: 0.5 // Trigger when 50% is in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const fill = entry.target.querySelector('.skill-progress-fill');
+          const data = entry.target.querySelector('data');
+          const value = data.getAttribute('value') + '%';
+
+          if (entry.isIntersecting) {
+            // Grow the bar
+            fill.style.width = value;
+          } else {
+            // Reset the bar when it leaves view
+            fill.style.width = '0%';
+          }
         });
-
-        skills.forEach(skill => observer.observe(skill));
+      }, {
+        threshold: 0.5 // Trigger when 50% is in view
       });
-    </script>
-<!DOCTYPE html>
 
-    <!-- custom js link-->
-    <script src="./assets/js/script.js"></script>
-    <!--
+      skills.forEach(skill => observer.observe(skill));
+    });
+  </script>
+
+
+  <!-- custom js link-->
+  <script src="./assets/js/script.js"></script>
+  <!--
       - ionicon link
     -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  </body>
-  </html>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

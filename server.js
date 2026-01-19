@@ -5,25 +5,24 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
+// Serve static files from the current directory
+app.use(express.static(path.join(__dirname)));
+
 // Debugging env variables
 console.log("✅ EMAIL_USER:", process.env.EMAIL_USER);
 console.log("✅ EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Not Loaded");
 
-// Root route for testing
-app.get("/", (req, res) => {
-  res.send("👋 Backend is running!");
-});
-
-// Email sending endpoint
-app.post("/send-email", async (req, res) => {
+// Email sending endpoint (supports both routes)
+const sendEmailHandler = async (req, res) => {
   const { fullname, email, message } = req.body;
 
   // Basic validation
@@ -55,9 +54,24 @@ app.post("/send-email", async (req, res) => {
     console.error("❌ Email sending failed:", error.message);
     res.status(500).json({ message: "Failed to send email.", error: error.message });
   }
+};
+
+// Register both email endpoints
+app.post("/send-email", sendEmailHandler);
+app.post("/api/sendEmail", sendEmailHandler);
+
+// Serve index.html for root route
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// 404 handler for undefined routes
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
 
 // Start the server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running at http://localhost:${PORT}`);
+  console.log(`📁 Serving static files from: ${__dirname}`);
 });
